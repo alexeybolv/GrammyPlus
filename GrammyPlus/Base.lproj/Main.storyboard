@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNB-Zt-gQR">
+                                <rect key="frame" x="20" y="20" width="78" height="31"/>
+                                <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryP-rx-55K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkT-qY-fSu">
+                                <rect key="frame" x="222" y="20" width="78" height="31"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhC-DD-mzi"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Genesis.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-U5-Elg">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fQg-U5-Elg" secondAttribute="height" multiplier="1:1" id="Z7T-8l-Dpq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTO-Qk-TEC">
+                                <rect key="frame" x="121" y="537" width="78" height="31"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVS-re-OGE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fQg-U5-Elg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0AW-03-Jcf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fQg-U5-Elg" secondAttribute="trailing" constant="-20" id="C8S-Xk-2ry"/>
+                            <constraint firstItem="kkT-qY-fSu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GZ7-FY-EPq"/>
+                            <constraint firstItem="kkT-qY-fSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SKG-L4-Dzp"/>
+                            <constraint firstItem="fQg-U5-Elg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XFO-J4-E9F"/>
+                            <constraint firstItem="rNB-Zt-gQR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="clT-4N-kmY"/>
+                            <constraint firstItem="fQg-U5-Elg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dR1-AD-Sdi"/>
+                            <constraint firstItem="rNB-Zt-gQR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="h4B-8L-EyW"/>
+                            <constraint firstItem="wTO-Qk-TEC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="igS-Ax-ARM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wTO-Qk-TEC" secondAttribute="bottom" id="jcy-vP-qdz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="fQg-U5-Elg" id="UjQ-At-5cx"/>
+                        <outlet property="loginButton" destination="rNB-Zt-gQR" id="IeF-Eq-jbx"/>
+                        <outlet property="logoutButton" destination="kkT-qY-fSu" id="fz3-fQ-vOp"/>
+                        <outlet property="refreshButton" destination="wTO-Qk-TEC" id="zJI-1P-lUG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="205" y="330"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Genesis.jpg" width="852" height="640"/>
+    </resources>
 </document>
